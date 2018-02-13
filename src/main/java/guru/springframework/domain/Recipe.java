@@ -21,7 +21,7 @@ public class Recipe {
   @Enumerated(value = EnumType.STRING)
   private Difficulty difficulty;
 
-  @OneToOne(cascade = CascadeType.ALL, mappedBy = "recipe")
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
   private Set<Ingredient> ingredients;
 
   @Lob
